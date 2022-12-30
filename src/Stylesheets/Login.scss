@@ -1,24 +1,24 @@
 @import "../Variables/Variables.scss";
 
 .loginContainer{
-    /* padding: 3rem; */
     display: flex;
     justify-content: stretch;
-    /* align-items: center; */
+
+    .loginsect1, .loginsect2{
+        width: 50vw;
+        height: 100vh;
+    }
 }
 
-.loginsect1, .loginsect2{
-    width: 50vw;
-    height: 100vh;
-}
 
 .loginsect1{
     padding: 5rem 3rem;
 
     img{
         width: 10rem;
+        cursor: pointer;
     }
-
+    
     .bckgrndimg{
         margin: 18% auto ;
         width: 100%;
@@ -90,6 +90,11 @@
 
 @media screen and (max-width: 1050px){
 
+    .loginsect1{
+        img{
+            width: 7rem;
+        }
+    }
     .loginsect2{
         #email, #password, button{
             width: 20rem;
@@ -97,4 +102,67 @@
 
     }
     
+}
+
+@media screen and (max-width: 900px){
+    .loginsect1{
+        .bckgrndimg{
+            margin: 25% auto;
+        }
+
+    }
+    .loginsect2{
+        padding: 10% 70px;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .loginsect2{
+        h2{
+            font-size:25px;
+        }
+
+        p{
+            font-size: 15px;
+        }
+        #email, #password, button{
+            max-width: 15rem;
+        } 
+
+    }
+}
+
+@media screen and (max-width: 650px){
+    .loginContainer{
+        display: block;
+        
+        .loginsect1{
+            width: 100vw;
+            height: 20vh;
+            
+            img{
+                width: 5rem;
+            }
+            .bckgrndimg{
+                display: none;
+            }
+
+        }
+
+        .loginsect2{
+            width: 100vw;
+            height: 70vh;
+            text-align: center;
+            box-shadow: none;
+            padding: 0 40px;
+
+            #email, #password{
+                margin: 1.25rem auto;
+            }
+        }
+        
+
+    }
+
 }
