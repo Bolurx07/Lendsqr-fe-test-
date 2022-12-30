@@ -1,7 +1,10 @@
-import '../Stylesheets/Login.scss'
-import logo from '../Assets/mainlogo.svg'
-import loginimg from '../Assets/loginbackgroundimg.svg'
+import '../Stylesheets/Login.scss';
+import logo from '../Assets/mainlogo.svg';
+import loginimg from '../Assets/loginbackgroundimg.svg';
+
+
 const Login = () => {
+
   return (
     <div className='loginContainer'>
 
@@ -22,6 +25,7 @@ const Login = () => {
                 <button type="submit">Log in</button>
             </form>
         </section>
+        
     </div>
   )
 }

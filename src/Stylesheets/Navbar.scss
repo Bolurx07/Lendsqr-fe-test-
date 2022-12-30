@@ -1,0 +1,12 @@
+.navcontainer{
+    font-family: "Work Sans";
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+
+    .logo{
+        max-width: 100px;
+        cursor: pointer;
+    }
+}
