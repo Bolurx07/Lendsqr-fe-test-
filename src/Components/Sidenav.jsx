@@ -1,4 +1,4 @@
-import React from 'react'
+import '../Stylesheets/Sidenav.scss';
 
 const Sidenav = () => {
   return (

@@ -1,12 +1,90 @@
+@import "../Variables/Variables.scss";
+
 .navcontainer{
     font-family: "Work Sans";
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0.5rem 2rem;
     box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
 
     .logo{
-        max-width: 100px;
-        cursor: pointer;
+        max-width: 120px;
+    }
+
+    .navdiv1, .navdiv2, .navdiv2 div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navdiv1{
+        max-width: 344px;
+        border: none;
+        border-radius: 8px;
+        background-color: $cyanish;
+        
+        div{
+            padding: 0.5rem 1rem;
+            margin-top: 0.25rem;
+
+            img{
+                width: 1rem;
+                margin: 0 auto;
+                text-align: center ;
+            }
+        }
+
+        #search{
+            padding: 0.75rem;
+            width: 300px;
+            border: 1px solid $greyish;
+            border-radius: 8px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        #search::placeholder{
+            color: #545f7d91;;
+        }
+    }
+
+    .navdiv2{
+        p{
+            font-size: 1rem;
+            margin: 0 1.5rem;
+            cursor: pointer;
+            color: #213F7D;
+            text-decoration: underline;
+        }
+        
+        div{
+            margin-left: 1.5rem;
+            
+            .username{
+                 margin-right: 0.25rem;
+                 margin-left: 0.5rem;
+                 text-decoration: none;
+            }
+        }
+        
+    }
+}
+
+.navcontainer img{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px){
+    .navcontainer{
+        
+        .navdiv1{
+           
+            max-width: 225px;
+    
+            #search{
+                width: 165px;
+            }
+        }
     }
 }

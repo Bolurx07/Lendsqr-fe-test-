@@ -1,0 +1,21 @@
+.navcontainer {
+  font-family: "Work Sans";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+}
+.navcontainer .logo {
+  max-width: 120px;
+  cursor: pointer;
+}
+.navcontainer .navdiv1, .navcontainer .navdiv2 {
+  display: flex;
+  justify-content: space-between;
+}
+.navcontainer .navdiv1 {
+  width: 344px;
+  background-color: #39CDCC;
+  border: 1px solid black;
+}/*# sourceMappingURL=Navbar.css.map */
