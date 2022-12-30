@@ -1,3 +1,5 @@
+@import "../Variables/Variables.scss";
+
 .loginContainer{
     /* padding: 3rem; */
     display: flex;
@@ -11,30 +13,88 @@
 }
 
 .loginsect1{
-    padding: 3rem;
+    padding: 5rem 3rem;
+
+    img{
+        width: 10rem;
+    }
+
+    .bckgrndimg{
+        margin: 18% auto ;
+        width: 100%;
+    }
 }
 
-.bckgrndimg{
-    margin: 20% auto ;
-    width: 100%;
-}
 
 .loginsect2{
-    padding: 7rem 3rem;
-    background-color: #ffffff;
+    padding: 10% 100px;
+    background-color: $white;
     box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
+
+    h2{
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 3.5rem;
+        color: $blueish;
+    }
+    
+    p{
+        font-size: 20px;
+        margin-bottom: 10%;
+        color: #545F7D;
+
+    }
+    
+    #email, #password{
+        display: block;
+        padding: 0.75rem;
+        margin: 1.25rem 0;
+        border: 2px solid $greyish;
+        border-radius: 5px;
+        width: 25rem;
+    }
+
+    #email::placeholder, #password::placeholder{
+        font-size: 14px;
+        color: $greyish;
+    }
+
+    .forgotpassword{
+        font-weight: 600;
+        font-size: 12px;
+        display: block;
+        color: $cyanish;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    button{
+        background-color: $cyanish;
+        padding: 0.75rem 0;
+        width: 25rem;
+        border: none;
+        border-radius: 8px;
+        color: $white;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    
+    button:hover{
+        color: $cyanish;
+        background-color: $white;
+        border: 2px solid $cyanish;
+    }
 }
 
-.loginsect2 h2{
-    font-size: 2.75rem;
-    font-weight: 700;
-    line-height: 3.5rem;
-    color: #213F7D;
-}
 
-#email, #password{
-    display: block;
-    padding: 0.5rem;
-    margin: 1rem 0;
-    border: 2px solid rgba(84, 95, 125, 0.15);
+@media screen and (max-width: 1050px){
+
+    .loginsect2{
+        #email, #password, button{
+            width: 20rem;
+        } 
+
+    }
+    
 }

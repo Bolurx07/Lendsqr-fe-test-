@@ -14,12 +14,12 @@ const Login = () => {
         
         <section className='loginsect2'>
             <h2>Welcome!</h2>
-            <p>Enter details to login</p>
+            <p>Enter details to login.</p>
             <form action="">
                 <input type="email" name="email" placeholder='Email' id='email' />
                 <input type="password" name="password" placeholder='Password' id='password' />
-                <p>Forgot Password</p>
-                <button type="submit">Login</button>
+                <span className='forgotpassword'>Forgot Password?</span>
+                <button type="submit">Log in</button>
             </form>
         </section>
     </div>
