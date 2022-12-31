@@ -1,12 +1,42 @@
+@import "../Variables/Variables.scss";
+
 .navcardcontainer{
     display: flex;
     align-items: center;
+    padding: 0.5rem 1.5rem;
+    opacity: 0.5;
+    font-family: 'Work Sans';
+    cursor: pointer;
+    
+    img{
+        margin-right: 0.5rem;
+    }
+
+    .navcardcontent{
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #213F7D;
+    }
 }
+
+.navcardcontainer:hover{
+    background-color: #39cdcd23;
+}
+
 
 /* Strictly for the active props in my usestate */
 .background{
-    background-color: #8D74F4;
-    color: white;
+    background-color: #39cdcd23;
+    border-left: 3px solid #39CDCC;
+    .navcardcontainer{
+        opacity: 1 ;
+        .navcardcontent{
+            font-weight: bolder;
+        }
+    }
 }
 
 .nobackground{

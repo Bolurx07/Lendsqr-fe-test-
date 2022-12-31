@@ -5,7 +5,7 @@ const Sidenavcard = ({image, content, alt, active}) => {
     <div className={active === true ? 'background' : 'nobackground'} >
         <div className='navcardcontainer'>
             <img src={image} alt={alt} />
-            <p className={navcardcontent}>{content}</p>
+            <a href="#" className='navcardcontent'>{content}</a>
         </div>
     </div>
   )

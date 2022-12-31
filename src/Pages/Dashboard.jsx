@@ -4,10 +4,12 @@ import '../Stylesheets/Dashboard.scss';
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className='dashboardcontainer'>
         <Navbar />
-        <Sidenav />
-        
+        <div className='sidenavdiv'>
+            <Sidenav />
+        </div>
+
     </div>
   )
 }
