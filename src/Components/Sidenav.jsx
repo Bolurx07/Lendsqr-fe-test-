@@ -26,34 +26,34 @@ const Sidenav = () => {
 
     // Usestate for sidenavcard component
     const [customers] = useState([
-      { Image: users, content: "Users", active: true  },
-      { Image: guarantor, content: "Guarantor", active: false },
-      { Image: loan, content: "Loans", active: false },
-      { Image: decision, content: "Decision Models", active: false },
-      { Image: saving, content: "Savings", active: false },
-      { Image: loan, content: "Loan Requests", active: false },
-      { Image: whitelist, content: "Whitelist", active: false },
-      { Image: karma, content: "Karma", active: false }
+      { Image: users, content: "Users", alt:"Users", active: true  },
+      { Image: guarantor, content: "Guarantor", alt:"Guarantor", active: false },
+      { Image: loan, content: "Loans", alt:"loan", active: false },
+      { Image: decision, content: "Decision Models", alt:"decision", active: false },
+      { Image: saving, content: "Savings", alt:"saving", active: false },
+      { Image: loan, content: "Loan Requests", alt:"loan", active: false },
+      { Image: whitelist, content: "Whitelist", alt:"whitelist", active: false },
+      { Image: karma, content: "Karma", alt:"karma", active: false }
 
   ]);
 
     const [business] = useState([
-      { Image: briefcase, content: "Organization", active: false  },
-      { Image: loan, content: "Loan Products", active: false },
-      { Image: savingprod, content: "Savings Products", active: false },
-      { Image: fees, content: "Fees and Charges", active: false },
-      { Image: service, content: "Services", active: false },
-      { Image: serviceacct, content: "Service Account", active: false },
-      { Image: settlement, content: "Settlements", active: false },
-      { Image: report, content: "Reports", active: false }
+      { Image: briefcase, content: "Organization", alt: "briefcase", active: false  },
+      { Image: loan, content: "Loan Products", alt: "loan", active: false },
+      { Image: savingprod, content: "Savings Products", alt: "savingprod", active: false },
+      { Image: fees, content: "Fees and Charges", alt: "fees", active: false },
+      { Image: service, content: "Services", alt: "service", active: false },
+      { Image: serviceacct, content: "Service Account", alt: "serviceacct", active: false },
+      { Image: settlement, content: "Settlements", alt: "settlement", active: false },
+      { Image: report, content: "Reports", alt: "report", active: false }
 
   ]);
 
   const [setting] = useState([
-    { Image: preference, content: "Preferences", active: false  },
-    { Image: pricing, content: "Fees and Pricing", active: false },
-    { Image: audit, content: "Audit Logs", active: false },
-    { Image: system, content: "Systems Messages", active: false }
+    { Image: preference, content: "Preferences", alt: "preference", active: false  },
+    { Image: pricing, content: "Fees and Pricing", alt: "pricing", active: false },
+    { Image: audit, content: "Audit Logs", alt: "audit", active: false },
+    { Image: system, content: "Systems Messages", alt: "system", active: false }
   ]);
 
   return (
@@ -72,7 +72,7 @@ const Sidenav = () => {
       <div className='dashboarddiv'>
         <p className='sidenavheading'>Customers</p>
         {customers.map((item) => (
-                        <Sidenavcard image={item.Image} content={item.content} active={item.active}/>
+                        <Sidenavcard image={item.Image} content={item.content} alt={item.alt} active={item.active}/>
                     ))}
       </div>
 
