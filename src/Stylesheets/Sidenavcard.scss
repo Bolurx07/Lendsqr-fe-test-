@@ -1,0 +1,14 @@
+.navcardcontainer{
+    display: flex;
+    align-items: center;
+}
+
+/* Strictly for the active props in my usestate */
+.background{
+    background-color: #8D74F4;
+    color: white;
+}
+
+.nobackground{
+    background-color: none;
+}

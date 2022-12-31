@@ -1,10 +1,10 @@
-import React from 'react'
+import '../Stylesheets/Sidenavcard.scss'
 
-const Sidenavcard = ({image}) => {
+const Sidenavcard = ({image, content, alt, active}) => {
   return (
-    <div>
+    <div className={active === true ? 'background' : 'nobackground'} >
         <div className='navcardcontainer'>
-            <img src={image} alt="" />
+            <img src={image} alt={alt} />
             <p className={navcardcontent}>{content}</p>
         </div>
     </div>
