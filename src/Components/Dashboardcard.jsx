@@ -1,11 +1,11 @@
-import React from 'react'
+import '../Stylesheets/Dashboardcard.scss'
 
-const Dashboardcard = ({imgsrc, content, data}) => {
+const Dashboardcard = ({imgsrc, content, data, alt}) => {
   return (
-    <div>
-        <img src={imgsrc} alt="" />
-        <p>{content}</p>
-        <p>{data}</p>
+    <div className='usercardcontainer'>
+        <img src={imgsrc} alt={alt} />
+        <p className='usercardcontent'>{content}</p>
+        <p className='usercarddata'>{data}</p>
     </div>
   )
 }
