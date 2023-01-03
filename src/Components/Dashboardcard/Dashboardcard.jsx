@@ -1,4 +1,4 @@
-import '../Stylesheets/Dashboardcard.scss'
+import './Dashboardcard.scss'
 
 const Dashboardcard = ({imgsrc, content, data, alt}) => {
   return (

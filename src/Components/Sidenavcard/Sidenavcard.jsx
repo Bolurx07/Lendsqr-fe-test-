@@ -1,4 +1,4 @@
-import '../Stylesheets/Sidenavcard.scss'
+import './Sidenavcard.scss'
 
 const Sidenavcard = ({image, content, alt, active}) => {
   return (

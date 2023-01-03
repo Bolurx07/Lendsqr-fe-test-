@@ -1,4 +1,4 @@
-import '../Stylesheets/Navbar.scss';
+import './Navbar.scss';
 import logo from '../Assets/mainlogo.svg';
 import searchicon from '../Assets/searchicon.svg';
 import avatar from '../Assets/avatar.svg';

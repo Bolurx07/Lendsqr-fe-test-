@@ -1,4 +1,4 @@
-import React from 'react'
+import './Datatable.scss';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import tableicon from '../Assets/tableicon.svg';
@@ -29,8 +29,7 @@ const Datatable = () => {
 
 
   return (
-    userData === undefined ? null : 
-    <table>
+      <table>
         <tr>
             <th>Organization <img src={tableicon} alt="tableicon" /></th>
             <th>Username <img src={tableicon} alt="tableicon" /></th>
@@ -39,12 +38,24 @@ const Datatable = () => {
             <th>Date joined <img src={tableicon} alt="tableicon" /></th>
             <th>Status <img src={tableicon} alt="tableicon" /></th>
         </tr>
+        {userData === undefined ? null : 
         <tr>
             <td>
                 {userData.map((data, index) => {
                     return (
                         <div key={index}>
-                                    {data.profile.firstName}
+                                    {data.orgName}
+        
+                        </div>
+                    )
+                })} 
+
+            </td>
+            <td>
+                {userData.map((data, index) => {
+                    return (
+                        <div key={index}>
+                                    {data.userName}
         
                         </div>
                     )
@@ -62,7 +73,29 @@ const Datatable = () => {
                 })} 
 
             </td>
-        </tr>
+            <td>
+                {userData.map((data, index) => {
+                    return (
+                        <div key={index}>
+                                    {data.profile.phoneNumber}
+        
+                        </div>
+                    )
+                })} 
+
+            </td>
+            <td>
+                {userData.map((data, index) => {
+                    return (
+                        <div key={index}>
+                                    {data.createdAt}
+        
+                        </div>
+                    )
+                })} 
+
+            </td>
+        </tr>}
     </table>
   )
 }

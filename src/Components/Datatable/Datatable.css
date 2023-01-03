@@ -1,0 +1,7 @@
+tr, td {
+  border: 1px solid red;
+}
+
+td div {
+  border-bottom: 1px solid blue;
+}/*# sourceMappingURL=Datatable.css.map */
