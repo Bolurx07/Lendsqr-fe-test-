@@ -1,9 +1,9 @@
 import './Navbar.scss';
-import logo from '../Assets/mainlogo.svg';
-import searchicon from '../Assets/searchicon.svg';
-import avatar from '../Assets/avatar.svg';
-import userdropdown from '../Assets/userdropdown.svg'
-import notification from '../Assets/notification.svg';
+import logo from '../../Assets/mainlogo.svg';
+import searchicon from '../../Assets/searchicon.svg';
+import avatar from '../../Assets/avatar.svg';
+import userdropdown from '../../Assets/userdropdown.svg'
+import notification from '../../Assets/notification.svg';
 
 const Navbar = () => {
 

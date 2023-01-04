@@ -1,6 +1,6 @@
 import './Login.scss';
-import logo from '../Assets/mainlogo.svg';
-import loginimg from '../Assets/loginbackgroundimg.svg';
+import logo from '../../Assets/mainlogo.svg';
+import loginimg from '../../Assets/loginbackgroundimg.svg';
 
 
 const Login = () => {

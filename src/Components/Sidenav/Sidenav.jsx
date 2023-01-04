@@ -1,26 +1,26 @@
 import "./Sidenav.scss";
 import { useState } from "react";
-import dashboard from "../Assets/dashboard.svg";
-import vicon from "../Assets/v-icon.svg";
-import briefcase from "../Assets/briefcase.svg";
-import users from "../Assets/users.svg";
-import saving from "../Assets/saving.svg";
-import whitelist from "../Assets/whitelist.svg";
-import guarantor from "../Assets/guarantor.svg";
-import loan from "../Assets/loan.svg";
-import decision from "../Assets/decision.svg";
-import karma from "../Assets/karma.svg";
+import dashboard from "../../Assets/dashboard.svg";
+import vicon from "../../Assets/v-icon.svg";
+import briefcase from "../../Assets/briefcase.svg";
+import users from "../../Assets/users.svg";
+import saving from "../../Assets/saving.svg";
+import whitelist from "../../Assets/whitelist.svg";
+import guarantor from "../../Assets/guarantor.svg";
+import loan from "../../Assets/loan.svg";
+import decision from "../../Assets/decision.svg";
+import karma from "../../Assets/karma.svg";
 import Sidenavcard from "../Sidenavcard/Sidenavcard";
-import savingprod from "../Assets/savingsprod.svg";
-import service from "../Assets/service.svg";
-import serviceacct from "../Assets/serviceacct.svg";
-import settlement from "../Assets/settlement.svg";
-import fees from "../Assets/fees.svg";
-import report from "../Assets/report.svg";
-import preference from "../Assets/preferences.svg";
-import pricing from "../Assets/pricing.svg";
-import system from "../Assets/system.svg";
-import audit from "../Assets/audit.svg";
+import savingprod from "../../Assets/savingsprod.svg";
+import service from "../../Assets/service.svg";
+import serviceacct from "../../Assets/serviceacct.svg";
+import settlement from "../../Assets/settlement.svg";
+import fees from "../../Assets/fees.svg";
+import report from "../../Assets/report.svg";
+import preference from "../../Assets/preferences.svg";
+import pricing from "../../Assets/pricing.svg";
+import system from "../../Assets/system.svg";
+import audit from "../../Assets/audit.svg";
 
 const Sidenav = () => {
   // Usestate for sidenavcard component

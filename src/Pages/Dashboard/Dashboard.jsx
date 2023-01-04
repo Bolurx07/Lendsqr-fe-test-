@@ -3,10 +3,10 @@ import { useState } from "react";
 import Dashboardcard from "../../Components/Dashboardcard/Dashboardcard";
 import Navbar from "../../Components/Navbar/Navbar";
 import Sidenav from "../../Components/Sidenav/Sidenav";
-import usericon1 from "../Assets/usericon1.svg";
-import usericon2 from "../Assets/usericon2.svg";
-import usericon3 from "../Assets/usericon3.svg";
-import usericon4 from "../Assets/usericon4.svg";
+import usericon1 from "../../Assets/usericon1.svg";
+import usericon2 from "../../Assets/usericon2.svg";
+import usericon3 from "../../Assets/usericon3.svg";
+import usericon4 from "../../Assets/usericon4.svg";
 import Datatable from "../../Components/Datatable/Datatable";
 
 const Dashboard = () => {

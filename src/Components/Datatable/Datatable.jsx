@@ -1,11 +1,12 @@
 import './Datatable.scss';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import tableicon from '../Assets/tableicon.svg';
+import tableicon from '../../Assets/tableicon.svg';
 
 
 
 const Datatable = () => {
+
     const [userData, setUserData] = useState()
 
     
@@ -29,74 +30,57 @@ const Datatable = () => {
 
 
   return (
-      <table>
-        <tr>
-            <th>Organization <img src={tableicon} alt="tableicon" /></th>
-            <th>Username <img src={tableicon} alt="tableicon" /></th>
-            <th>Email <img src={tableicon} alt="tableicon" /></th>
-            <th>Phone number <img src={tableicon} alt="tableicon" /></th>
-            <th>Date joined <img src={tableicon} alt="tableicon" /></th>
-            <th>Status <img src={tableicon} alt="tableicon" /></th>
-        </tr>
+//   <div>
+//       {userData === undefined ? null :
+//         <div>
+//             <h1>
+    
+//                 {userData[0].email}    
+//             </h1>
+//         </div>}
+//   </div>
+
+<div >
+        
         {userData === undefined ? null : 
-        <tr>
-            <td>
-                {userData.map((data, index) => {
-                    return (
-                        <div key={index}>
-                                    {data.orgName}
-        
-                        </div>
-                    )
-                })} 
+         
+         <table className='tablecontainer'>
 
-            </td>
-            <td>
-                {userData.map((data, index) => {
-                    return (
-                        <div key={index}>
-                                    {data.userName}
-        
-                        </div>
-                    )
-                })} 
-
-            </td>
-            <td>
-                {userData.map((data, index) => {
-                    return (
-                        <div key={index}>
-                                    {data.email}
-        
-                        </div>
-                    )
-                })} 
-
-            </td>
-            <td>
-                {userData.map((data, index) => {
-                    return (
-                        <div key={index}>
-                                    {data.profile.phoneNumber}
-        
-                        </div>
-                    )
-                })} 
-
-            </td>
-            <td>
-                {userData.map((data, index) => {
-                    return (
-                        <div key={index}>
-                                    {data.createdAt}
-        
-                        </div>
-                    )
-                })} 
-
-            </td>
-        </tr>}
-    </table>
+                        
+         <tr>
+             <th>Organization <img src={tableicon} alt="tableicon" /></th>
+             <th>Username <img src={tableicon} alt="tableicon" /></th>
+             <th>Email <img src={tableicon} alt="tableicon" /></th>
+             <th>Phone number <img src={tableicon} alt="tableicon" /></th>
+             <th>Date joined <img src={tableicon} alt="tableicon" /></th>
+             <th>Status <img src={tableicon} alt="tableicon" /></th>
+         </tr>   
+               {userData.map((data, index) => {
+                   
+                   return (
+                        
+                       <tr key={index}>
+                            <td id='td' >
+                                {data.orgName}
+                            </td>
+                            <td id='td'>
+                                {data.userName}
+                            </td>
+                            <td id='td' >
+                                {data.email}
+                            </td>
+                            <td id='td'>
+                                {data.profile.phoneNumber}
+                            </td>
+                            <td id='td'>
+                                {data.createdAt}
+                            </td>
+                       </tr>
+                   )}
+                )} 
+        </table>           
+    }
+</div>
   )
 }
 
