@@ -1,4 +1,5 @@
 import './Login.scss';
+import {Link} from 'react-router-dom';
 import logo from '../../Assets/mainlogo.svg';
 import loginimg from '../../Assets/loginbackgroundimg.svg';
 
@@ -22,7 +23,9 @@ const Login = () => {
                 <input type="email" name="email" placeholder='Email' id='email' />
                 <input type="password" name="password" placeholder='Password' id='password' />
                 <span className='forgotpassword'>Forgot Password?</span>
-                <button type="submit">Log in</button>
+                <Link to="Dashboard">
+                    <button type="submit">Log in</button>
+                </Link>
             </form>
         </section>
         

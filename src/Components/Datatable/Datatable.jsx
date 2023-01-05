@@ -6,9 +6,13 @@ import dots from '../../Assets/dots.svg';
 import Viewdetails from '../Viewdetails/Viewdetails';
 import UserFilter from '../Userfilter/UserFilter';
 
+import TablePaginationDemo from '../Pagination';
+
 
 
 const Datatable = () => {
+
+
 
     // React hooks for Data fetched from mockapi
 
@@ -33,31 +37,35 @@ const Datatable = () => {
         getData()
     }, []);
 
-    // Usestate for Viewdetails toggle display
-    const [toggle1, setToggle1] = useState(false)
-
-    const viewdetailClick1 = () => {
-      return setToggle1(prevToggle =>!prevToggle)
-    }
-
-    const [toggle2, setToggle2] = useState(false)
-
-    const viewdetailClick2 = () => {
-        return setToggle2(prevToggle =>!prevToggle)
-      };
-
-    const [toggle3, setToggle3] = useState(false)
+    // Usestate for Userfilter toggle display
     
-    const viewdetailClick3 = () => {
-        return setToggle3(prevToggle =>!prevToggle)
+    const [filterToggle, setFilterToggle] = useState(false)
+    
+    const filterToggleClick = () => {
+        return setFilterToggle(prevToggle =>!prevToggle)
         };
 
-    // Usestate for Userfilter toggle display
-        const [filterToggle, setFilterToggle] = useState(false)
-    
-        const filterToggleClick = () => {
-            return setFilterToggle(prevToggle =>!prevToggle)
+    // Usestate for Viewdetails toggle display
+
+        const [toggle1, setToggle1] = useState(false)
+
+        const viewdetailClick1 = () => {
+        return setToggle1(prevToggle =>!prevToggle)
+        }
+
+        const [toggle2, setToggle2] = useState(false)
+
+        const viewdetailClick2 = () => {
+            return setToggle2(prevToggle =>!prevToggle)
+        };
+
+        const [toggle3, setToggle3] = useState(false)
+        
+        const viewdetailClick3 = () => {
+            return setToggle3(prevToggle =>!prevToggle)
             };
+
+    
 
   return (
 <div >
@@ -215,6 +223,8 @@ const Datatable = () => {
                 )} 
         </table>           
     }
+
+    <TablePaginationDemo />
 </div>
   )
 }
