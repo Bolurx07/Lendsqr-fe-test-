@@ -57,7 +57,9 @@ const Dashboard = () => {
           />
         ))}
       </div>
-      <Datatable />
+      <div>
+        <Datatable />
+      </div>
     </div>
   );
 };

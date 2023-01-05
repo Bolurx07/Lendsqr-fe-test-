@@ -2,6 +2,7 @@ import './Datatable.scss';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import tableicon from '../../Assets/tableicon.svg';
+import dots from '../../Assets/dots.svg';
 
 
 
@@ -60,20 +61,28 @@ const Datatable = () => {
                    return (
                         
                        <tr key={index}>
-                            <td id='td' >
+                            <td >
                                 {data.orgName}
                             </td>
-                            <td id='td'>
+                            <td >
                                 {data.userName}
                             </td>
-                            <td id='td' >
+                            <td >
                                 {data.email}
                             </td>
-                            <td id='td'>
+                            <td >
                                 {data.profile.phoneNumber}
                             </td>
-                            <td id='td'>
+                            <td >
                                 {data.createdAt}
+                            </td>
+                            <td>
+                                <div className='status-div'>
+                                    { data.profile.phoneNumber.length === 12 ? 
+                                        <div><p>Inactive</p></div> : 
+                                        <div><p>Active</p></div>}
+                                    <img src={dots} alt="dots"  />
+                                </div>
                             </td>
                        </tr>
                    )}
