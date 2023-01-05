@@ -3,10 +3,13 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import tableicon from '../../Assets/tableicon.svg';
 import dots from '../../Assets/dots.svg';
+import Viewdetails from '../Viewdetails/Viewdetails';
 
 
 
 const Datatable = () => {
+
+    // React hooks for Data fetched from mockapi
 
     const [userData, setUserData] = useState()
 
@@ -29,6 +32,24 @@ const Datatable = () => {
         getData()
     }, []);
 
+    // Usestate for Viewdetails display
+    const [toggle1, setToggle1] = useState(false)
+
+    const viewdetailClick1 = () => {
+      return setToggle1(prevToggle =>!prevToggle)
+    }
+
+    const [toggle2, setToggle2] = useState(false)
+
+    const viewdetailClick2 = () => {
+        return setToggle2(prevToggle =>!prevToggle)
+      }
+
+    const [toggle3, setToggle3] = useState(false)
+    
+    const viewdetailClick3 = () => {
+        return setToggle3(prevToggle =>!prevToggle)
+        }
 
   return (
 //   <div>
@@ -56,6 +77,109 @@ const Datatable = () => {
              <th>Date joined <img src={tableicon} alt="tableicon" /></th>
              <th>Status <img src={tableicon} alt="tableicon" /></th>
          </tr>   
+         
+         {userData === undefined ? null :
+         <tr>
+                <td>
+                    {userData[15].orgName}    
+                </td>
+                <td >
+                    {userData[15].userName}
+                </td>
+                <td >
+                    {userData[15].email}
+                </td>
+                <td >
+                    {userData[15].phoneNumber}
+                </td>
+                <td >
+                    {userData[15].createdAt}
+                </td>
+                <td>
+                                <div className='status-div'>
+                                    { userData[15].phoneNumber.length === 12 ? 
+                                        <div className='inactive' ><p>Inactive</p></div> : 
+                                        <div className='active'><p>Active</p></div>
+                                    }
+                                    
+                                    <img src={dots} alt="dots" onClick={viewdetailClick1} />
+                                    <div className={toggle1 ? 'showViewDetail1' : 'hideViewDetail1'} >
+                                     <Viewdetails />
+                                    </div>
+                                </div>
+
+                </td>
+         </tr>
+        }
+
+{userData === undefined ? null :
+         <tr>
+                <td>
+                    {userData[96].orgName}    
+                </td>
+                <td >
+                    {userData[96].userName}
+                </td>
+                <td >
+                    {userData[96].email}
+                </td>
+                <td >
+                    {userData[96].phoneNumber}
+                </td>
+                <td >
+                    {userData[96].createdAt}
+                </td>
+                <td>
+                                <div className='status-div'>
+                                    { userData[96].phoneNumber.length === 12 ? 
+                                        <div className='inactive' ><p>Inactive</p></div> : 
+                                        <div className='active'><p>Active</p></div>
+                                    }
+                                    
+                                    <img src={dots} alt="dots" onClick={viewdetailClick2} />
+                                    <div className={toggle2 ? 'showViewDetail2' : 'hideViewDetail2'} >
+                                     <Viewdetails />
+                                    </div>
+                                </div>
+
+                </td>
+         </tr>
+        }
+
+{userData === undefined ? null :
+         <tr>
+                <td>
+                    {userData[55].orgName}    
+                </td>
+                <td >
+                    {userData[55].userName}
+                </td>
+                <td >
+                    {userData[55].email}
+                </td>
+                <td >
+                    {userData[55].phoneNumber}
+                </td>
+                <td >
+                    {userData[55].createdAt}
+                </td>
+                <td>
+                                <div className='status-div'>
+                                    { userData[55].phoneNumber.length === 12 ? 
+                                        <div className='inactive' ><p>Inactive</p></div> : 
+                                        <div className='active'><p>Active</p></div>
+                                    }
+                                    
+                                    <img src={dots} alt="dots" onClick={viewdetailClick3} />
+                                    <div className={toggle3 ? 'showViewDetail3' : 'hideViewDetail3'} >
+                                     <Viewdetails />
+                                    </div>
+                                </div>
+
+                </td>
+         </tr>
+        }
+         
                {userData.map((data, index) => {
                    
                    return (
@@ -79,8 +203,10 @@ const Datatable = () => {
                             <td>
                                 <div className='status-div'>
                                     { data.profile.phoneNumber.length === 12 ? 
-                                        <div><p>Inactive</p></div> : 
-                                        <div><p>Active</p></div>}
+                                        <div className='inactive' ><p>Inactive</p></div> : 
+                                        <div className='active'><p>Active</p></div>
+                                    }
+                                    
                                     <img src={dots} alt="dots"  />
                                 </div>
                             </td>

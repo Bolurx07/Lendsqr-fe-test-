@@ -7,6 +7,8 @@
     font-style: normal;
     color: #545F7D;
     margin-left: 20%;
+    padding: 0 0.5rem;
+   
 
     
     th{
@@ -32,6 +34,31 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        
+        .active, .inactive{
+            background-color: rgba(128, 128, 128, 0.137);
+            padding: 0.5rem ;
+            border-radius: 100px;
+        }
+
+        .active{
+            color: #39CD62;
+        }
+
+        img{
+            cursor: pointer;
+        }
     }
 
+}
+
+
+.showViewDetail1, .showViewDetail2, .showViewDetail3{
+    display: block;
+    position: absolute;
+    right: 2rem;
+}
+
+.hideViewDetail1, .hideViewDetail2, .hideViewDetail3{
+    display: none;
 }
