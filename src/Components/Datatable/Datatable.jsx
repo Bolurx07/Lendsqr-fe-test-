@@ -52,133 +52,123 @@ const Datatable = () => {
         }
 
   return (
-//   <div>
-//       {userData === undefined ? null :
-//         <div>
-//             <h1>
-    
-//                 {userData[0].email}    
-//             </h1>
-//         </div>}
-//   </div>
-
 <div >
         
         {userData === undefined ? null : 
          
-         <table className='tablecontainer'>
+            <table className='tablecontainer'>
 
                         
-         <tr>
-             <th>Organization <img src={tableicon} alt="tableicon" /></th>
-             <th>Username <img src={tableicon} alt="tableicon" /></th>
-             <th>Email <img src={tableicon} alt="tableicon" /></th>
-             <th>Phone number <img src={tableicon} alt="tableicon" /></th>
-             <th>Date joined <img src={tableicon} alt="tableicon" /></th>
-             <th>Status <img src={tableicon} alt="tableicon" /></th>
-         </tr>   
+                <tr>
+                    <th>Organization <img src={tableicon} alt="tableicon" /></th>
+                    <th>Username <img src={tableicon} alt="tableicon" /></th>
+                    <th>Email <img src={tableicon} alt="tableicon" /></th>
+                    <th>Phone number <img src={tableicon} alt="tableicon" /></th>
+                    <th>Date joined <img src={tableicon} alt="tableicon" /></th>
+                <th>Status <img src={tableicon} alt="tableicon" /></th>
+            </tr>   
          
          {userData === undefined ? null :
-         <tr>
-                <td>
-                    {userData[15].orgName}    
-                </td>
-                <td >
-                    {userData[15].userName}
-                </td>
-                <td >
-                    {userData[15].email}
-                </td>
-                <td >
-                    {userData[15].phoneNumber}
-                </td>
-                <td >
-                    {userData[15].createdAt}
-                </td>
-                <td>
-                                <div className='status-div'>
-                                    { userData[15].phoneNumber.length === 12 ? 
-                                        <div className='inactive' ><p>Inactive</p></div> : 
-                                        <div className='active'><p>Active</p></div>
-                                    }
-                                    
-                                    <img src={dots} alt="dots" onClick={viewdetailClick1} />
-                                    <div className={toggle1 ? 'showViewDetail1' : 'hideViewDetail1'} >
-                                     <Viewdetails />
+            <tr>
+                    <td>
+                        {userData[15].orgName}    
+                    </td>
+                    <td >
+                        {userData[15].userName}
+                    </td>
+                    <td >
+                        {userData[15].email}
+                    </td>
+                    <td >
+                        {userData[15].phoneNumber}
+                    </td>
+                    <td >
+                        {userData[15].createdAt}
+                    </td>
+                    <td>
+                                    <div className='status-div'>
+                                        { userData[15].phoneNumber.length === 12 ? 
+                                            <div className='inactive' ><p>Inactive</p></div> : 
+                                            <div className='active'><p>Active</p></div>
+                                        }
+                                        
+                                        <img src={dots} alt="dots" onClick={viewdetailClick1} />
+                                        <div className={toggle1 ? 'showViewDetail1' : 'hideViewDetail1'} >
+                                        <Viewdetails />
+                                        </div>
                                     </div>
-                                </div>
 
-                </td>
-         </tr>
+                    </td>
+            </tr>
         }
 
-{userData === undefined ? null :
-         <tr>
-                <td>
-                    {userData[96].orgName}    
-                </td>
-                <td >
-                    {userData[96].userName}
-                </td>
-                <td >
-                    {userData[96].email}
-                </td>
-                <td >
-                    {userData[96].phoneNumber}
-                </td>
-                <td >
-                    {userData[96].createdAt}
-                </td>
-                <td>
-                                <div className='status-div'>
-                                    { userData[96].phoneNumber.length === 12 ? 
-                                        <div className='inactive' ><p>Inactive</p></div> : 
-                                        <div className='active'><p>Active</p></div>
-                                    }
-                                    
-                                    <img src={dots} alt="dots" onClick={viewdetailClick2} />
-                                    <div className={toggle2 ? 'showViewDetail2' : 'hideViewDetail2'} >
-                                     <Viewdetails />
-                                    </div>
-                                </div>
+        {userData === undefined ? null :
+                <tr>
+                        <td>
+                            {userData[96].orgName}    
+                        </td>
+                        <td >
+                            {userData[96].userName}
+                        </td>
+                        <td >
+                            {userData[96].email}
+                        </td>
+                        <td >
+                            {userData[96].phoneNumber}
+                        </td>
+                        <td >
+                            {userData[96].createdAt}
+                        </td>
+                        <td>
+                                        <div className='status-div'>
+                                            { userData[96].phoneNumber.length === 12 ? 
+                                                <div className='inactive' ><p>Inactive</p></div> : 
+                                                <div className='active'><p>Active</p></div>
+                                            }
+                                            
+                                            <img src={dots} alt="dots" onClick={viewdetailClick2} />
+                                            <div className={toggle2 ? 'showViewDetail2' : 'hideViewDetail2'} >
+                                            <Viewdetails />
+                                            </div>
+                                        </div>
 
-                </td>
-         </tr>
-        }
+                        </td>
+                </tr>
+                }
 
-{userData === undefined ? null :
-         <tr>
-                <td>
-                    {userData[55].orgName}    
-                </td>
-                <td >
-                    {userData[55].userName}
-                </td>
-                <td >
-                    {userData[55].email}
-                </td>
-                <td >
-                    {userData[55].phoneNumber}
-                </td>
-                <td >
-                    {userData[55].createdAt}
-                </td>
-                <td>
-                                <div className='status-div'>
-                                    { userData[55].phoneNumber.length === 12 ? 
-                                        <div className='inactive' ><p>Inactive</p></div> : 
-                                        <div className='active'><p>Active</p></div>
-                                    }
-                                    
-                                    <img src={dots} alt="dots" onClick={viewdetailClick3} />
-                                    <div className={toggle3 ? 'showViewDetail3' : 'hideViewDetail3'} >
-                                     <Viewdetails />
-                                    </div>
-                                </div>
+        {userData === undefined ? null :
+                <tr>
+                        <td>
+                            {userData[55].orgName}    
+                        </td>
+                        <td >
+                            {userData[55].userName}
+                        </td>
+                        <td >
+                            {userData[55].email}
+                        </td>
+                        <td >
+                            {userData[55].phoneNumber}
+                        </td>
+                        <td >
+                            {userData[55].createdAt}
+                        </td>
+                        <td>
+                                        <div className='status-div'>
+                                            { userData[55].phoneNumber.length === 12 ? 
+                                                <div className='inactive' ><p>Inactive</p></div> : 
+                                                <div className='active'><p>Active</p></div>
+                                            }
+                                            
+                                            <img src={dots} alt="dots" onClick={viewdetailClick3} />
+                                            <div className={toggle3 ? 'showViewDetail3' : 'hideViewDetail3'} >
+                                            <Viewdetails />
+                                            </div>
+                                        </div>
 
-                </td>
-         </tr>
-        }
+                        </td>
+                </tr>
+                }
          
                {userData.map((data, index) => {
                    
@@ -206,7 +196,6 @@ const Datatable = () => {
                                         <div className='inactive' ><p>Inactive</p></div> : 
                                         <div className='active'><p>Active</p></div>
                                     }
-                                    
                                     <img src={dots} alt="dots"  />
                                 </div>
                             </td>
