@@ -1,0 +1,69 @@
+@import "../../Variables/Variables.scss";
+
+.formcontainer{
+    padding: 1rem ;
+    font-family: 'Work Sans';
+    font-style: normal;
+    width: 300px;
+    background-color: $white;
+    border: 1px solid rgba(84, 95, 125, 0.14);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+
+    div{
+        margin: 1rem;
+
+        label{
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        input, select{
+            border: 1px solid #545f7d83;;
+            border-radius: 8px;
+            width: 230px;
+            padding: 0.75rem 0.5rem;
+            font-size: 14px;
+            margin-top: 0.35rem;
+        }
+
+        input::placeholder, #status, #org, #date{
+            color: #545f7d83;
+        }
+    }
+    .button-div{
+        display: flex;
+        justify-content: space-evenly;
+
+        #reset, #submit{
+            padding: 0.75rem 1.5rem;
+            font-size: 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        #reset{
+            background-color: $white;
+            border: 1px solid #545F7D;
+        }
+        
+        #reset:hover{
+            color: #39CDCC;
+        }
+
+        #submit{
+            color: $white;
+            background-color: #39CDCC;
+            border: 1px solid #39CDCC;
+        }
+
+        #submit:hover{
+            background-color: $white;
+            color: #39CDCC;
+
+        }
+
+    }
+    
+}

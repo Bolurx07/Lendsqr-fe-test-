@@ -4,6 +4,7 @@ import axios from 'axios';
 import tableicon from '../../Assets/tableicon.svg';
 import dots from '../../Assets/dots.svg';
 import Viewdetails from '../Viewdetails/Viewdetails';
+import UserFilter from '../Userfilter/UserFilter';
 
 
 
@@ -32,7 +33,7 @@ const Datatable = () => {
         getData()
     }, []);
 
-    // Usestate for Viewdetails display
+    // Usestate for Viewdetails toggle display
     const [toggle1, setToggle1] = useState(false)
 
     const viewdetailClick1 = () => {
@@ -43,13 +44,20 @@ const Datatable = () => {
 
     const viewdetailClick2 = () => {
         return setToggle2(prevToggle =>!prevToggle)
-      }
+      };
 
     const [toggle3, setToggle3] = useState(false)
     
     const viewdetailClick3 = () => {
         return setToggle3(prevToggle =>!prevToggle)
-        }
+        };
+
+    // Usestate for Userfilter toggle display
+        const [filterToggle, setFilterToggle] = useState(false)
+    
+        const filterToggleClick = () => {
+            return setFilterToggle(prevToggle =>!prevToggle)
+            };
 
   return (
 <div >
@@ -57,18 +65,21 @@ const Datatable = () => {
         {userData === undefined ? null : 
          
             <table className='tablecontainer'>
-
-                        
+        
                 <tr>
-                    <th>Organization <img src={tableicon} alt="tableicon" /></th>
-                    <th>Username <img src={tableicon} alt="tableicon" /></th>
-                    <th>Email <img src={tableicon} alt="tableicon" /></th>
-                    <th>Phone number <img src={tableicon} alt="tableicon" /></th>
-                    <th>Date joined <img src={tableicon} alt="tableicon" /></th>
-                <th>Status <img src={tableicon} alt="tableicon" /></th>
-            </tr>   
+                    <th>Organization <span><img src={tableicon} alt="tableicon" onClick={filterToggleClick} /></span></th>
+                    <th>Username <span><img src={tableicon} alt="tableicon" onClick={filterToggleClick} /></span></th>
+                    <th>Email <span><img src={tableicon} alt="tableicon" onClick={filterToggleClick} /></span></th>
+                    <th>Phone number <span><img src={tableicon} alt="tableicon" onClick={filterToggleClick} /></span></th>
+                    <th>Date joined <span><img src={tableicon} alt="tableicon" onClick={filterToggleClick} /></span></th>
+                    <th>Status <span><img src={tableicon} alt="tableicon" onClick={filterToggleClick} /></span></th>
+                </tr>   
+
+                <div className={filterToggle ? 'showFilter' : 'hideFilter'}>
+                    <UserFilter />
+                </div>
          
-         {userData === undefined ? null :
+                {userData === undefined ? null :
             <tr>
                     <td>
                         {userData[15].orgName}    

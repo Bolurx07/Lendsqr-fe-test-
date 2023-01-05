@@ -8,9 +8,9 @@
     color: #545F7D;
     margin-left: 20%;
     padding: 0 0.5rem;
-   
+    position: relative;
+    width: 960px;
 
-    
     th{
         text-align: left;
         font-weight: 600;
@@ -19,15 +19,18 @@
         text-transform: uppercase;
         padding: 0.5rem;
         border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+        
+        img{
+            cursor: pointer;
+        }
     }
     
-    #td{
+    td{
         font-weight: 400;
         font-size: 14px;
         line-height: 16px;
         padding: 0.25rem;
         border-bottom: 1px solid rgba(33, 63, 125, 0.1);
-        width: 0.25rem;
     }
 
     .status-div{
@@ -52,6 +55,17 @@
 
 }
 
+
+.showFilter{
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+}
+
+.hideFilter{
+    display: none;
+}
 
 .showViewDetail1, .showViewDetail2, .showViewDetail3{
     display: block;
