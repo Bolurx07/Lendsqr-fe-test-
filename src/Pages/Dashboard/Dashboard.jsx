@@ -11,6 +11,7 @@ import Datatable from "../../Components/Datatable/Datatable";
 
 const Dashboard = () => {
   
+
   // Usestate for Dashboardcard component
   const [user] = useState([
     { Image: usericon1, 
@@ -39,12 +40,12 @@ const Dashboard = () => {
 
   return (
     <div className="dashboardcontainer">
-      {/* <div className='navbardiv'>
+      <div className='navbardiv'>
             <Navbar />
         </div>
         <div className='sidenavdiv'>
             <Sidenav />
-        </div> */}
+        </div>
       <h1 className="userdash">Users</h1>
       <div className="dashcarddiv">
         {user.map((item) => (
