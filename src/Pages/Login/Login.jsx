@@ -23,7 +23,7 @@ const Login = () => {
                 <input type="email" name="email" placeholder='Email' id='email' />
                 <input type="password" name="password" placeholder='Password' id='password' />
                 <span className='forgotpassword'>Forgot Password?</span>
-                <Link to="Dashboard">
+                <Link to="/Dashboard">
                     <button type="submit">Log in</button>
                 </Link>
             </form>

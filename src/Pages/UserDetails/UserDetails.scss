@@ -1,0 +1,56 @@
+@import "../../Variables/Variables.scss";
+
+.details-link a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #545F7D;
+}
+
+.details-header, .details-header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details-header{
+    p{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        color: #213F7D;
+    }
+    button{
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin: 0 0.5rem;
+        cursor: pointer;
+        background-color: #ffffff00;
+    }
+
+    .button1{
+        border: 1px solid #E4033B;
+        color: #E4033B;
+    }
+
+    .button1:hover{
+        background-color: #E4033B;
+        color: $white;
+    }
+
+    .button2{
+        border: 1px solid $cyanish;
+        color: $cyanish;
+    }
+
+    .button2:hover{
+        background-color: $cyanish;
+        color: $white;
+    }
+}
