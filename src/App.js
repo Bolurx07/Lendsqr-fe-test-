@@ -6,6 +6,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import UserDetails from './Pages/UserDetails/UserDetails';
 
 function App() {
+
   return (
     <div>
       <Routes>
