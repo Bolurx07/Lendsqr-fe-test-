@@ -16,26 +16,6 @@ export default function TablePaginationDemo() {
     setPage(0);
   };
 
-  const [userData, setUserData] = useState()
-
-    
-    useEffect(() => {
-        const getData = () => {
-            try {
-                axios
-                .get(' https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/4')
-                .then((result) => {
-                        const users = result;
-                        console.log(users);
-                        setUserData(users);
-                })
-            } catch (error) {
-                console.log(error)
-            }
-        };
-        
-        getData()
-    }, []);
 
   return (
     <TablePagination
